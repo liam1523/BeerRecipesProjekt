@@ -1,0 +1,50 @@
+﻿@model BeerRecipesProjekt.Models.BeerRecipe
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>BeerRecipe</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tagline" class="control-label"></label>
+                <input asp-for="tagline" class="form-control" />
+                <span asp-validation-for="tagline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="description" class="control-label"></label>
+                <input asp-for="description" class="form-control" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ingredients" class="control-label"></label>
+                <input asp-for="ingredients" class="form-control" />
+                <span asp-validation-for="ingredients" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="food_pairing" class="control-label"></label>
+                <input asp-for="food_pairing" class="form-control" />
+                <span asp-validation-for="food_pairing" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

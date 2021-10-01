@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BeerRecipesProjekt.Models.BeerRecipe>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Beer recipes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Tagline
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Ingredients
+            </th>
+            <th>
+                Food pairing
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tagline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ingredients)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.food_pairing)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
