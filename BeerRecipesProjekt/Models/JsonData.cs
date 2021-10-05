@@ -13,8 +13,6 @@ namespace BeerRecipesProjekt.Models
     [Keyless]
     public class Ingredients
     {
-        public Malt _Malt { get; set; }
-        public Hops _Hops { get; set; }
 
         public Ingredients()
         {
