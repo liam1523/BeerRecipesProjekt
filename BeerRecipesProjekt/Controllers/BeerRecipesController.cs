@@ -24,6 +24,7 @@ namespace BeerRecipesProjekt.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _context.BeerRecipe.ToListAsync());
+
         }
 
         // GET: BeerRecipes/Details/5
