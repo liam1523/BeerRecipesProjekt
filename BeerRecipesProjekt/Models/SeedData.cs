@@ -27,24 +27,19 @@ namespace BeerRecipesProjekt.Models
                 foreach (var jsonData in data)
                 {
                     string foodpairs = string.Join(", ", jsonData.food_pairing);
-                    List<string> maltingredients = new List<string>();
+                    List<string> ingredients = new List<string>();
                     List<string> hopsingredients = new List<string>();
                     foreach (var malt in jsonData.ingredients.malt)
                     {
-                        maltingredients.Add(malt.name);
+                        ingredients.Add(malt.name);
                     }
-                    //foreach (var hops in jsonData.ingredients.hops)
-                    //{
-                    //    hopsingredients.Add(hops.name);
-                    //}
-                    string maltIngre = string.Join(", ", maltingredients.ToArray());
-                    //string hopsIngre = string.Join(", ", hopsingredients.ToArray());
+                    string ingredientsStr = string.Join(", ", ingredients.ToArray());
                     beerRecipes.Add(new BeerRecipe { 
                         name = jsonData.name, 
                         tagline = jsonData.tagline, 
                         description = jsonData.description, 
                         food_pairing = foodpairs, 
-                        ingredients = maltIngre
+                        ingredients = ingredientsStr
                     });
 
                 }

@@ -17,19 +17,13 @@ namespace BeerRecipesProjekt.Models
         public Ingredients()
         {
             malt = new List<Malt>();
-            hops = new List<Hops>();
         }
         public List<Malt> malt { get; set; }
-        public List<Hops> hops { get; set; }
 
         public class Malt
         {
             public string name { get; set; }
 
-        }
-        public class Hops
-        {
-            public string name { get; set; }
         }
 
     }
