@@ -7,35 +7,35 @@
 <h1>Details</h1>
 
 <div>
-    <h4>BeerRecipe</h4>
+    <h4>Beer recipe</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.name)
+            Name
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.tagline)
+            Tagline
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.tagline)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.description)
+            Description
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.description)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ingredients)
+            Ingredients
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ingredients)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.food_pairing)
+            Food pairing
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.food_pairing)
@@ -43,6 +43,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
